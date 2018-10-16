@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="luq-q0-VL8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detect The Pic-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Detect_The_Pic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iTunesArtwork" translatesAutoresizingMaskIntoConstraints="NO" id="uy6-xA-foB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="qGa-xc-jPt"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0H-yE-NCL">
+                                <rect key="frame" x="0.0" y="314" width="375" height="353"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f0H-yE-NCL" firstAttribute="top" secondItem="uy6-xA-foB" secondAttribute="bottom" id="41j-EA-OZ9"/>
+                            <constraint firstItem="uy6-xA-foB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="92Z-dV-xx9"/>
+                            <constraint firstItem="f0H-yE-NCL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JpJ-hO-Wba"/>
+                            <constraint firstItem="f0H-yE-NCL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QTd-P0-p7q"/>
+                            <constraint firstItem="uy6-xA-foB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QdR-Qn-uPv"/>
+                            <constraint firstItem="f0H-yE-NCL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WKm-2R-90a"/>
+                            <constraint firstItem="uy6-xA-foB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zi5-Jz-Jd8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detect The Pic" id="Ek0-YI-smC">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="bUP-a2-BbC">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="bou-nr-R9K"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="rOm-dy-4J5">
+                                <connections>
+                                    <action selector="mediaFolderTapped:" destination="BYZ-38-t0r" id="onw-fH-Rt9"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="uy6-xA-foB" id="SFG-iD-9BM"/>
+                        <outlet property="tableView" destination="f0H-yE-NCL" id="Q6I-7c-3uC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fvs-Nk-CAH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="luq-q0-VL8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gIO-XL-Wuf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rIa-2W-Ra3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulb-jX-bIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="iTunesArtwork" width="512" height="512"/>
+    </resources>
+</document>
